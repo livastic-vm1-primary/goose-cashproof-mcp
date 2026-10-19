@@ -1,0 +1,10 @@
+# EXAMPLE ONLY. Do not automatically install, edit goose's real config, or add
+# wallet keys/credentials. Replace /ABSOLUTE/USER-CHECKED/PATH manually if used.
+extensions:
+  - type: stdio
+    name: cashproof
+    cmd: python3
+    args:
+      - /ABSOLUTE/USER-CHECKED/PATH/goose-cashproof-mcp/server.py
+    timeout: 30
+    description: "Local no-network receipt and bounty evidence triage"
