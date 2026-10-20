@@ -1,0 +1,25 @@
+version: "1.0.0"
+title: "CashProof Offline Evidence Guard"
+description: "Safely inspect caller-supplied on-chain receipt declarations and funded bounty flags without wallet access, payment execution, shell commands or external network calls."
+instructions: |
+  This original MIT CashProof recipe is for manual operator-side review, NOT chain
+  verification. Never infer that a bounty quote, 402 challenge or maintainer's
+  promise is an actual payment. Every CashProof receipt and payer flag is supplied
+  by the caller and is not independently verified by this offline MCP extension.
+  Present uncertain outcomes as inconclusive, and never sign/send/approve funds.
+  This original recipe intentionally declares no external data, no cloud compute,
+  no sensitive key or any other tool that could manipulate user accounts.
+prompt: |
+  Briefly explain the two available CashProof read-only tools and their limitations.
+  Do not call the tools until a human explicitly supplies consented PUBLIC test data.
+extensions:
+  - type: stdio
+    name: cashproof-local
+    cmd: python3
+    args:
+      - server.py
+    timeout: 30
+    description: "Zero-network, zero-signing public receipt arithmetic and bounty risk gate"
+    available_tools:
+      - reconcile_base_usdc_receipts
+      - triage_public_bounty

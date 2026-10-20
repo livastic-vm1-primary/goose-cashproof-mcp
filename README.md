@@ -36,3 +36,14 @@ Separate [SlothProof](https://github.com/livastic-vm1-primary/slothproof-bounty-
 References: [goose custom extensions](https://goose-docs.ai/docs/tutorials/custom-extensions/), [goose configuration](https://goose-docs.ai/docs/getting-started/using-extensions/), [MCP stdio](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports).
 
 MIT License, © 2026 PaperPilot Tools. All code disclosed as substantially AI-assisted and original to this one economic owner.
+
+## Official goose CLI recipe validation
+
+An official goose CLI 1.55.0 executable was independently downloaded,
+release-SHA256 verified and run in an isolated HOME. The original recipe
+was accepted by the native goose recipe validator, and rendered without
+running an LLM agent. Local MCP subprocess tests remain separately valid.
+See [exact first-party CLI evidence and limitations](docs/GOOSE_OFFICIAL_CLI_V155_RECIPE_VALIDATION_20261020.md)
+and the [auditable no-wallet recipe](recipes/goose-cashproof-offline.yaml).
+This is NOT yet a goose Desktop chat or live model-provider tool-call test,
+does not authorize wallet operations, and produced no sponsor payment.
